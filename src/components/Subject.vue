@@ -1,23 +1,34 @@
 <template>
   <div class="subject">
     <h2>{{ title }}</h2>
-    <v-btn v-for="item in experiments" :key="item" depressed color="primary" class="button" @click="goNext(boton1)">{{ item }}</v-btn>
+    <v-btn
+      v-for="item in experiments"
+      :key="item.name"
+      depressed
+      color="primary"
+      class="button"
+      @click="goNext(item)"
+      >{{ item.name }}</v-btn
+    >
   </div>
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default {
   name: "Subject",
   props: ["title", "experiments"],
-  mounted () {
-    console.log(this.experiments)
+  mounted() {
+    console.log(this.experiments);
   },
   methods: {
-    goNext (name) {
-      this.$router.push({name: 'Experiment', params: {name: name}})
-    }
+    goNext(experiment) {
+      this.setExperiment(experiment)
+      this.$router.push({ name: "Experiment" });
+    },
+    ...mapActions(['setExperiment'])
   }
-}
+};
 </script>
 
 <style scoped>
