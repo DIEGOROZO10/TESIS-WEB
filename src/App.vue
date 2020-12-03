@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar class="top_bar" app color="primary" dark>
       <router-link to="/"><v-icon>mdi-home</v-icon></router-link>
-      <div id="page_title">Experimentos de fisica modulares</div>
+      <div id="page_title">Experimentos de Física Modulares</div>
       <img
         class="nav_image"
         alt="Universidad logo"

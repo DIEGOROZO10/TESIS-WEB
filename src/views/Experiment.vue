@@ -15,6 +15,9 @@
         <video width="420" autoplay controls>
           <source :src="'./videos/' + experiment.videoName" type="video/mp4" />
         </video>
+        <video width="420" autoplay controls>
+          <source :src="'./videos/' + experiment.videoName2" type="video/mp4" />
+        </video>
       </div>
       </v-col>
     </v-row>
@@ -41,5 +44,8 @@ export default {
 }
 .list {
   text-align: left;
+}
+#intro{
+  white-space:pre;
 }
 </style>
