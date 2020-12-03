@@ -21,6 +21,7 @@
       </div>
       </v-col>
     </v-row>
+    <button @click="serialPort">serialPort</button>
   </div>
 </template>
 
@@ -29,6 +30,10 @@ import {mapGetters} from 'vuex'
 export default {
   name: "Experiment",
   methods: {
+    serialPort () {
+      fetch('http://localhost:3000')
+        .then(response => console.log(response))
+    }
   },
   computed: {
     ...mapGetters({

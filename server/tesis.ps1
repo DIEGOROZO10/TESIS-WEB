@@ -7,7 +7,8 @@ do {
         $count++
         if($count -ge 100)
         {
-            Write-Host "finish" 
+            Write-Host "finish"
+            $port.Close()
             break
         }
     }
